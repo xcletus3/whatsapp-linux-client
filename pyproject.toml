@@ -1,0 +1,63 @@
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[build-system]
+requires = ["setuptools>=77.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whatsapp-linux-client"
+version = "1.0.0"
+description = "A lightweight, open-source WhatsApp Web desktop client built with PyQt6."
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Cletus Xavier", email = "cletusxavier3@protonmail.com" }
+]
+requires-python = ">=3.9"
+
+dependencies = [
+  "PyQt6>=6.6",
+  "PyQt6-WebEngine>=6.6"
+]
+
+keywords = [
+  "whatsapp",
+  "linux",
+  "desktop",
+  "pyqt6",
+  "webapp"
+]
+
+classifiers = [
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Communications :: Chat",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/xcletus3/whatsapp-linux-client"
+Repository = "https://github.com/xcletus3/whatsapp-linux-client"
+Issues = "https://github.com/xcletus3/whatsapp-linux-client/issues"
+
+[project.scripts]
+whatsapp-linux-client = "whatsapp_linux_client.app:main"
+
+# Include non-Python files inside the wheel
+[tool.setuptools.package-data]
+"whatsapp_linux_client" = [
+  "icons/*.png",
+  "data/*.desktop"
+]
+
+# Install system-wide data files (icon + desktop entry)
+[tool.setuptools.data-files]
+"share/icons/hicolor/256x256/apps" = [
+  "src/whatsapp_linux_client/icons/whatsapp-linux-client.png"
+]
+"share/applications" = [
+  "src/whatsapp_linux_client/data/whatsapp-linux-client.desktop"
+]

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WhatsApp Linux Client
+Comment=Lightweight WhatsApp Web client for Linux
+Exec=whatsapp-linux-client
+Icon=whatsapp-linux-client
+Terminal=false
+Categories=Network;Chat;InstantMessaging;
+StartupNotify=true
