@@ -57,6 +57,12 @@ Built with PyQt6 — **no Electron**, lower memory usage.
 
     the terminal: `whatsapp-linux-client`
 
+## 📦 Debian Installation
+
+Download the latest .deb from Releases and install:
+
+    sudo apt install ./whatsapp-linux-client_1.0.0_all.deb
+
 ### 🖥️ System Requirements
 
     Linux (tested on Debian / XFCE)
