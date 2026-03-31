@@ -39,29 +39,38 @@ Built with PyQt6 — **no Electron**, lower memory usage.
 
 ## 🧩 Installation
 
-### Option 1: Install from wheel (recommended)
-
-    sudo python3 -m pip install --break-system-packages whatsapp_linux_client-1.0.0-py3-none-any.whl
-
-### Option 2: Install from source (development)
-
-    git clone https://github.com/<your-username>/whatsapp-linux-client.git
-    cd whatsapp-linux-client
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -e .
-
-### After installation, launch the app from:
-
-    your application menu, or
-
-    the terminal: `whatsapp-linux-client`
-
-## 📦 Debian Installation
-
-Download the latest .deb from Releases and install:
+### 📦 Option 1: Install via .deb (recommended for Linux users)
+Download the latest .deb from the Releases page and install:
 
     sudo apt install ./whatsapp-linux-client_1.0.0_all.deb
+
+This method provides full desktop integration (icon, menu entry, notifications).
+
+### 🐍 Option 2: Install from wheel (manual / advanced)
+
+    python3 -m pip install --break-system-packages whatsapp_linux_client-1.0.0-py3-none-any.whl
+
+⚠️ Note: This method may not provide full desktop integration (menu entry, icons, notifications). Recommended mainly for testing or manual setups.
+
+
+## 🛠 Option 3: Install from source (development)
+
+    git clone https://github.com/xcletus3/whatsapp-linux-client.git
+cd whatsapp-linux-client
+python3 -m venv venv
+source venv/bin/activate
+pip install -e .
+
+🚀 Running the application
+After installation, launch the app from:
+your application menu, or
+the terminal:
+Bash
+    whatsapp-linux-client
+
+## 🐧 Platform Note
+This application is designed primarily for Linux.
+While the wheel package may install on other platforms, full functionality and system integration are only guaranteed on Linux.
 
 ### 🖥️ System Requirements
 
