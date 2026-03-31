@@ -63,8 +63,7 @@ This method provides full desktop integration (icon, menu entry, notifications).
 
 🚀 Running the application
 After installation, launch the app from:
-your application menu, or
-the terminal:
+your application menu, or the terminal:
 Bash
     whatsapp-linux-client
 
