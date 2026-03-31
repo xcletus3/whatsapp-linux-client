@@ -53,13 +53,13 @@ This method provides full desktop integration (icon, menu entry, notifications).
 ⚠️ Note: This method may not provide full desktop integration (menu entry, icons, notifications). Recommended mainly for testing or manual setups.
 
 
-## 🛠 Option 3: Install from source (development)
+### 🛠 Option 3: Install from source (development)
 
     git clone https://github.com/xcletus3/whatsapp-linux-client.git
-cd whatsapp-linux-client
-python3 -m venv venv
-source venv/bin/activate
-pip install -e .
+    cd whatsapp-linux-client
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -e .
 
 🚀 Running the application
 After installation, launch the app from:
