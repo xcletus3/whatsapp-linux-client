@@ -1,0 +1,24 @@
+Source: whatsapp-linux-client
+Section: net
+Priority: optional
+Maintainer: Cletus Xavier <cletusxavier3@protonmail.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-setuptools,
+               python3-pip
+Standards-Version: 4.6.2
+Homepage: https://github.com/xcletus3/whatsapp-linux-client
+Rules-Requires-Root: no
+
+Package: whatsapp-linux-client
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-pyqt6,
+         python3-pyqt6.qtwebengine
+Description: Lightweight WhatsApp Web desktop client
+ A lightweight, open-source WhatsApp Web desktop wrapper built with
+ PyQt6. Provides persistent login, native notifications, automatic
+ media downloads and desktop integration (menu entry, icon).

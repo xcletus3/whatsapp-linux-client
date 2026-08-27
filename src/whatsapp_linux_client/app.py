@@ -156,6 +156,10 @@ def setup_downloads(profile, window):
 def main():
     app = QApplication(sys.argv)
     app.setApplicationName("WhatsApp Linux Client")
+    # Tells GNOME/Wayland which installed .desktop entry this process belongs
+    # to, so the dock/app-grid icon comes from that entry's Icon= key instead
+    # of falling back to a generic one.
+    app.setDesktopFileName("whatsapp-linux-client")
 
     profile = make_profile()
 
@@ -164,13 +168,16 @@ def main():
     view.setPage(page)
     view.setWindowTitle("WhatsApp")
 
-    try:
-        here = os.path.dirname(__file__)
-        icon_path = os.path.join(here, "icons", "whatsapp-linux-client.png")
-        if os.path.exists(icon_path):
-            view.setWindowIcon(QIcon(icon_path))
-    except Exception:
-        pass
+    icon_candidates = [
+        "/usr/share/icons/hicolor/256x256/apps/whatsapp-linux-client.png",
+        "/usr/local/share/icons/hicolor/256x256/apps/whatsapp-linux-client.png",
+        os.path.join(os.path.dirname(__file__), "icons", "whatsapp-linux-client.png"),
+    ]
+    icon_path = next((p for p in icon_candidates if os.path.exists(p)), None)
+    if icon_path:
+        app_icon = QIcon(icon_path)
+        app.setWindowIcon(app_icon)
+        view.setWindowIcon(app_icon)
 
     view.resize(1100, 800)
     view.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)

@@ -1,0 +1,20 @@
+whatsapp-linux-client (1.0.0-2) unstable; urgency=medium
+
+  * Fix dock/app-grid icon showing as generic instead of the app icon on
+    GNOME/Wayland: call QApplication.setDesktopFileName() so the compositor
+    can match the running window to the installed .desktop entry's Icon=.
+
+ -- Cletus Xavier <cletusxavier3@protonmail.com>  Fri, 28 Aug 2026 01:39:11 +0530
+
+whatsapp-linux-client (1.0.0-1) unstable; urgency=medium
+
+  * Rebuild packaging using dh-python/pybuild so the package installs
+    correctly to standard Python and desktop-integration paths:
+    - whatsapp_linux_client module now installs under the standard
+      dist-packages path (previously /usr/lib/whatsapp-linux-client,
+      which was never on sys.path).
+    - /usr/bin/whatsapp-linux-client launcher is now generated from
+      the project's console_scripts entry point (previously missing).
+    - .desktop file and icon installation unchanged (already correct).
+
+ -- Cletus Xavier <cletusxavier3@protonmail.com>  Fri, 28 Aug 2026 01:39:11 +0530
