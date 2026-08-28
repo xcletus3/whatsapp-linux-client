@@ -17,7 +17,8 @@ Architecture: all
 Depends: ${python3:Depends},
          ${misc:Depends},
          python3-pyqt6,
-         python3-pyqt6.qtwebengine
+         python3-pyqt6.qtwebengine,
+         libnotify-bin
 Description: Lightweight WhatsApp Web desktop client
  A lightweight, open-source WhatsApp Web desktop wrapper built with
  PyQt6. Provides persistent login, native notifications, automatic

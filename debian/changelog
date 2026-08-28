@@ -1,3 +1,12 @@
+whatsapp-linux-client (1.0.0-3) unstable; urgency=medium
+
+  * Fix app crashing when a WhatsApp notification arrives and notify-send
+    (libnotify-bin) is not installed: add libnotify-bin as a Depends, and
+    make present_notification() tolerate a missing notify-send instead of
+    letting the exception propagate and abort the whole application.
+
+ -- Cletus Xavier <cletusxavier3@protonmail.com>  Sat, 29 Aug 2026 00:00:00 +0530
+
 whatsapp-linux-client (1.0.0-2) unstable; urgency=medium
 
   * Fix dock/app-grid icon showing as generic instead of the app icon on

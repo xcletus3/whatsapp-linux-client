@@ -102,7 +102,10 @@ def make_profile():
             message,
         ])
 
-        subprocess.run(cmd, check=False)
+        try:
+            subprocess.run(cmd, check=False)
+        except OSError:
+            pass
 
 
 
