@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "whatsapp-linux-client"
-version = "1.0.0"
+version = "1.0.1"
 description = "A lightweight, open-source WhatsApp Web desktop client built with PyQt6."
 readme = "README.md"
 license = "MIT"

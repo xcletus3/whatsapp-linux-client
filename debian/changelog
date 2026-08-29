@@ -1,3 +1,11 @@
+whatsapp-linux-client (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release 1.0.1: fixes the .deb packaging, GNOME dock
+    icon, and the notify-send crash from the 1.0.0 release (see the
+    1.0.0-1..1.0.0-3 entries below for details of each fix).
+
+ -- Cletus Xavier <cletusxavier3@protonmail.com>  Sat, 29 Aug 2026 13:43:27 +0530
+
 whatsapp-linux-client (1.0.0-3) unstable; urgency=medium
 
   * Fix app crashing when a WhatsApp notification arrives and notify-send
