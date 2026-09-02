@@ -77,7 +77,6 @@ The built `.deb` is written one directory above the source tree.
 ## ⚠️ Known Limitations
 
 - This application depends entirely on WhatsApp Web — if WhatsApp Web changes or becomes unavailable, the app may stop working.
-- Voice and video calls are not supported (WhatsApp Web limitation).
 
 ## 🔐 Privacy & Security
 
